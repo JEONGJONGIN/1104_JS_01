@@ -1,0 +1,92 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>配列</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<style>#main{margin:5px;padding: 5px; background: #666;color:#fff;}</style>
+</head>
+<body>
+<h1>配列</h1>
+
+<!-- ここに日時を表示させる -->
+<div id="view"></div>
+<!-- ここに日時を表示させる -->
+
+
+以下に入力してください↓ <br>
+<input type="text" id="test">
+<br>
+<button id="aa">ボタンを押す</button>
+
+
+<script>
+//記述練習
+const a = ["A","B","C"];
+
+//演習1
+// console.log(a[1],'配列の中「B」だけ表示')//配列の中「B」だけ表示
+
+//演習2
+const menu = ['カレー','おでん','うどん','麻婆豆腐','猪鍋'];
+// console.log(menu,'menu配列');
+// console.log(menu[3],'麻婆豆腐のみ表記');
+
+//画面に表示
+// $('#view').html(menu[0]);
+
+//for文の演習
+for(let i = 0; i <= 3; i++){
+
+// console.log(menu[i], 'メニューの中身')
+}
+
+//for文の演習2
+for(let i = 0; i < menu.length; i++){
+
+  // console.log(menu[i], 'メニューの中身')
+}
+
+  //val()とは何ですか？
+  //お客さまが入力した「文字」を習得するおまじない
+  //inputタグのことを指しています
+
+  // 送信のボタンが押されたらclickイベントを動かします。
+  $('#aa').on('click', function(){
+  // 入力されている文字を習得する = val();
+    let vv = $('#test').val();
+    console.log(vv, '入力された文字')
+
+    if(vv === ""){
+      alert('何も入力されていませんよ！入力してください！')
+    }
+
+    if(vv === 'あほ'){
+      console.log('あほって言うな！！！')
+    }
+
+    // 入力欄を空にするテクニック
+    $('#test').val("")
+
+})
+
+
+// for(let i = 0; i < menu.length; i++){
+
+//   console.log(menu[i])
+// } 
+
+
+
+
+
+
+// //くじ札
+// const kuji = ["大吉", "吉", "凶"];
+// const r = Math.floor(Math.random()*3); 
+// $("#view").html(kuji[r]);
+
+</script>
+</body>
+</html>
