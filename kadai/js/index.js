@@ -1,7 +1,6 @@
 const notesContainer = document.querySelector(".note-container")
 const creatBtn = document.querySelector(".btn")
 let notes = document.querySelectorAll(".input-box-tittle, .input-box-text");
-const currentTime = new Date().formet("YYYY-MM-DD HH:mm:ss");
 
 function showNotes(){
     notesContainer.innerHTML = localStorage.getItem("notes")
@@ -20,7 +19,6 @@ creatBtn.addEventListener("click", ()=>{
 
     let inputBoxText = document.createElement("p");
     let imgText = document.createElement("img");
-    let timeText = document.createElement("span")
     inputBoxText.className = "input-box-text";
     inputBoxText.setAttribute("contenteditable", "true");
     imgText.src = "img/delete.png"
