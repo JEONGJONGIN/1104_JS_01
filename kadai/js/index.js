@@ -15,14 +15,23 @@ creatBtn.addEventListener("click", ()=>{
     let inputBoxTittle = document.createElement("p");
     inputBoxTittle.className = "input-box-tittle";
     inputBoxTittle.setAttribute("contenteditable", "true");
+    inputBoxTittle.textContent = "Tittle"
     notesContainer.appendChild(inputBoxTittle);
 
     let inputBoxText = document.createElement("p");
     let imgText = document.createElement("img");
     inputBoxText.className = "input-box-text";
     inputBoxText.setAttribute("contenteditable", "true");
+    inputBoxText.textContent = "Enter note text"
     imgText.src = "img/delete.png"
     notesContainer.appendChild(inputBoxText).appendChild(imgText);
+
+    let timeText = document.createElement("span");
+    timeText.className = "input-box-time"
+    const now = new Date();
+    const timeString = now.toLocaleString();
+    timeText.textContent = timeString;
+    notesContainer.appendChild(timeText)
 })
 
 notesContainer.addEventListener("click",function(e){
